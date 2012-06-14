@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Api test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="Alexis Saavedra">
+
+<!-- Le styles -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  #parametersHolder{margin:0;}
+  pre{border: none;}
+</style>
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span5">
+			<form class="well">
+				<label class="control-label" for="base_url">Resource URL</label>
+	              <div class="input-prepend">
+	                <span class="add-on">http://</span><input class="input-xlarge" id="base_url" size="16" type="text">
+	              </div>
+
+	          	<label for="call_method">Method</label>
+				<select id="call_method">
+					<option value="get" selected="selected" >GET</option>
+					<option value="post">POST</option>
+					<option value="put">PUT</option>
+					<option value="delete">DELETE</option>
+				</select>
+
+				<label for"param1">Parameters</label>
+
+
+				<div id="parametersHolder">
+					
+				</div>
+				
+				<span class="btn-group" id="addParameter">
+					<a class="btn btn-info"><i class="icon-plus icon-white"></i> Add another</a>
+				</span>
+
+				<div class="span" style="margin-top: 1em">
+					<input type="button" id="makeRequest" value="Submit" class="btn btn-primary" />
+					<input type="button" id="resetFields" value="Reset" class="btn btn-warning" />
+				</div>
+				<div class="clearfix"></div>
+			</form>
+		</div>
+
+		<div class="span7">
+			<h3>Response</h3>
+			<pre id="response_holder"></pre>
+		</div>
+	</div>
+</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/generic-api-test.js"></script>
+</body>
+</html>
